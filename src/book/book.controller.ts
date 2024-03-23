@@ -1,7 +1,8 @@
-import { Body, Delete, Get, Param, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { BookServce } from './book.service';
-import { Book } from './book.module';
+import { Book } from './book.models';
 
+@Controller("api/v1/hook")
 export class BookController {
   constructor(private readonly bookService: BookServce) {}
 
